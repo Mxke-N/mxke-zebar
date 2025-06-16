@@ -1,13 +1,7 @@
 # Mxke Zebar Configuration
 
-<a href="img/image1.png" target="_blank">
-  <img src="img/image1.png" alt="preview" />
-</a>
-
-<a href="img/image2.png" target="_blank">
-  <img src="img/image2.png" alt="preview" />
-</a>
-
+![Screenshot of mxke-zebar in use with GlazeWM, Git Bash underneath](https://github.com/user-attachments/assets/712c4879-421b-4129-a76e-9a8250a7c3cb)
+![Screenshot of mxke-zebar with volume slider open and media title auto scroll](https://github.com/user-attachments/assets/e6af9a34-3383-408b-b7dc-46efd14766f2)
 
 <p align="center">
   <img src="https://img.shields.io/github/last-commit/Mxke-N/mxke-zebar?style=flat" />
