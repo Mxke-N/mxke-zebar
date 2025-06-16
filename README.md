@@ -1,14 +1,13 @@
 # Mxke Zebar Configuration
 
-A personal configuration for [Zebar](https://github.com/glzr-io/zebar).
+![Screenshot of mxke-zebar in use with GlazeWM, Git Bash underneath](https://github.com/user-attachments/assets/712c4879-421b-4129-a76e-9a8250a7c3cb)
+![Screenshot of mxke-zebar with volume slider open and media title auto scroll](https://github.com/user-attachments/assets/e6af9a34-3383-408b-b7dc-46efd14766f2)
 
 <p align="center">
   <img src="https://img.shields.io/github/last-commit/Mxke-N/mxke-zebar?style=flat" />
-  <img src="https://img.shields.io/github/license/Mxke-N/mxke-zebar?style=flat" />
+  <img src="https://img.shields.io/github/repo-size/Mxke-N/mxke-zebar?style=flat" />
+  <img src="https://img.shields.io/github/stars/Mxke-N/mxke-zebar?style=social" />
 </p>
-
-![preview](img/image1.png)
-![preview](img/image2.png)
 
 ## Installation
 
@@ -53,21 +52,21 @@ A personal configuration for [Zebar](https://github.com/glzr-io/zebar).
 
 ## Features
 
-- **Media Controls**
+- **🎵 Media Controls**
   - Volume control with slider
   - Spotify media playback control
   - Toggleable media title auto scroll loop 
 
-- **System Information**
+- **🖥️ System Information**
   - Memory and CPU usage stats
   - Battery level and charging status
   - Network connection display (WiFi or Ethernet) 
 
-- **Weather & Time**
+- **☁️ Weather & Time**
   - Local weather conditions with icons
   - Date and time display
 
-- **Window Management**
+- **🧱 Window Management**
   - GlazeWM integration
   - Workspace control features
 
