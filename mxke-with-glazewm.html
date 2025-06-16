@@ -70,6 +70,7 @@
               position: 'relative',
             }}
             onClick={() => setShouldScroll(!shouldScroll)}
+            title="Toggle media title scrolling"
           >
             <div
               className="scroll-track"
@@ -258,20 +259,17 @@
                       style={{ cursor: 'pointer' }}
                       onClick={e => {
                         if (e.target.id !== 'volume-progress') {
-                          if (e.shiftKey) {
-                            if (volume > 0) {
-                              setPreviousVolume(volume);
-                              setVolume(0);
-                              output.audio.setVolume?.(0);
-                            } else {
-                              setVolume(previousVolume);
-                              output.audio.setVolume?.(previousVolume);
-                            }
+                          if (volume > 0) {
+                            setPreviousVolume(volume);
+                            setVolume(0);
+                            output.audio.setVolume?.(0);
                           } else {
-                            setShowVolumeSlider(prev => !prev);
+                            setVolume(previousVolume);
+                            output.audio.setVolume?.(previousVolume);
                           }
                         }
                       }}
+                      title="Mute/Unmute"
                     >
                       {getVolumeIcon(volume)}
                     </div>
@@ -301,25 +299,11 @@
                     <span 
                       onClick={e => {
                         if (e.target.id !== 'volume-progress') {
-                          if (e.shiftKey) {
-                            if (volume > 0) {
-                              setPreviousVolume(volume);
-                              setVolume(0);
-                              output.audio.setVolume?.(0);
-                            } else {
-                              setVolume(previousVolume);
-                              output.audio.setVolume?.(previousVolume);
-                            }
-                          } else {
-                            setShowVolumeSlider(prev => !prev);
-                          }
+                          setShowVolumeSlider(prev => !prev);
                         }
                       }}
-                      className={`volume-percentage ${
-                        volume.toString().length === 1 ? 'single-digit' :
-                        volume.toString().length === 2 ? 'double-digit' :
-                        'triple-digit'
-                      }`}
+                      className="volume-percentage"
+                      title="Open volume slider"
                     >
                       {volume}%
                     </span>
