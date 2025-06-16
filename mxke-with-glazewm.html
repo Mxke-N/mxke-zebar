@@ -60,6 +60,8 @@
           }
         }, [text]);
 
+        const displayText = shouldScroll ? text : (text.length > 19 ? text.slice(0, 19) + '...' : text);
+
         return (
           <div
             ref={containerRef}
@@ -89,7 +91,7 @@
                   <span style={{ paddingRight: '22px', cursor: 'pointer' }}>{text}</span>
                 </>
               ) : (
-                <span ref={textRef} style={{ cursor: 'pointer' }}>{text}</span>
+                <span ref={textRef} style={{ cursor: 'pointer' }}>{displayText}</span>
               )}
             </div>
           </div>
