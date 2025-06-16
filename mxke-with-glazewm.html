@@ -54,8 +54,6 @@
           const textEl = textRef.current;
 
           if (container && textEl) {
-            // const isOverflowing = textEl.scrollWidth > container.clientWidth;
-            // setShouldScroll(isOverflowing);
             setTextWidth(textEl.scrollWidth);
           }
         }, [text]);
@@ -78,10 +76,11 @@
               className="scroll-track"
               style={{
                 display: 'flex',
-                width: `${textWidth * 2}px`,
+                width: shouldScroll ? `${textWidth * 2}px` : '100%',
                 animation: shouldScroll
                   ? `scroll-left ${textWidth / speed}s linear infinite`
                   : 'none',
+                justifyContent: shouldScroll ? 'none' : 'center'
               }}
             >
               {shouldScroll ? (
