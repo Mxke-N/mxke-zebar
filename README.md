@@ -2,13 +2,14 @@
 
 A personal configuration for [Zebar](https://github.com/glzr-io/zebar).
 
-<p align="center">
-  <img src="https://img.shields.io/github/last-commit/Mxke-N/mxke-zebar?style=flat" />
-  <img src="https://img.shields.io/github/license/Mxke-N/mxke-zebar?style=flat" />
-</p>
-
 ![preview](img/image1.png)
 ![preview](img/image2.png)
+
+<p align="center">
+  <img src="https://img.shields.io/github/last-commit/Mxke-N/mxke-zebar?style=flat" />
+  <img src="https://img.shields.io/github/repo-size/Mxke-N/mxke-zebar?style=flat" />
+  <img src="https://img.shields.io/github/stars/Mxke-N/mxke-zebar?style=social" />
+</p>
 
 ## Installation
 
@@ -53,21 +54,21 @@ A personal configuration for [Zebar](https://github.com/glzr-io/zebar).
 
 ## Features
 
-- **Media Controls**
+- **🎵 Media Controls**
   - Volume control with slider
   - Spotify media playback control
   - Toggleable media title auto scroll loop 
 
-- **System Information**
+- **🖥️ System Information**
   - Memory and CPU usage stats
   - Battery level and charging status
   - Network connection display (WiFi or Ethernet) 
 
-- **Weather & Time**
+- **☁️ Weather & Time**
   - Local weather conditions with icons
   - Date and time display
 
-- **Window Management**
+- **🧱 Window Management**
   - GlazeWM integration
   - Workspace control features
 
