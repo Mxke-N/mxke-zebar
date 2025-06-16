@@ -105,6 +105,10 @@ body,
   i:hover {
     color: rgb(160, 160, 160);
   }
+
+  span:hover {
+    color: rgb(200, 200, 200);
+  }
 }
 
 .workspaces {
