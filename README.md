@@ -1,7 +1,5 @@
 # Mxke Zebar Configuration
 
-A personal configuration for [Zebar](https://github.com/glzr-io/zebar).
-
 ![preview](img/image1.png)
 ![preview](img/image2.png)
 
