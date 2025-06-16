@@ -1,7 +1,13 @@
 # Mxke Zebar Configuration
 
-![preview](img/image1.png)
-![preview](img/image2.png)
+<a href="img/image1.png" target="_blank">
+  <img src="img/image1.png" alt="preview" />
+</a>
+
+<a href="img/image2.png" target="_blank">
+  <img src="img/image2.png" alt="preview" />
+</a>
+
 
 <p align="center">
   <img src="https://img.shields.io/github/last-commit/Mxke-N/mxke-zebar?style=flat" />
