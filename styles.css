@@ -1,0 +1,214 @@
+/**
+ * Import the Nerdfonts icon font.
+ * Ref https://www.nerdfonts.com/cheat-sheet for a cheatsheet of available Nerdfonts icons.
+ */
+@import 'https://www.nerdfonts.com/assets/css/webfont.css';
+
+i {
+  color: rgba(205, 205, 205, 0.95); 
+  margin-right: 6px;
+}
+
+body {
+  color: rgb(255 255 255 / 90%);
+  font-size: 10px;
+  overflow: hidden;
+  font-family: "Ink Free", monospace; 
+  letter-spacing: 1px;
+  font-weight: 550;
+}
+
+div,
+span,
+p {
+  cursor: default;
+  user-select: none;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+.app {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1.5fr;
+  align-items: center;
+  height: 25px;
+  padding: 0px 1.2vw;
+  margin-top: -1px;
+}
+
+.left,
+.center,
+.right {
+  display: flex;
+  align-items: center;
+}
+
+.left {
+  justify-self: start;
+  justify-content: start;
+  width: 100%;
+}
+
+.left-info {
+  display: flex;
+  align-items: center;
+  margin-right: 12px;
+}
+
+.center {
+  justify-self: center;
+  justify-content: center;
+}
+
+.right {
+  justify-self: end;
+}
+
+.date,
+.time,
+.binding-mode,
+.tiling-direction,
+.paused-button,
+.network,
+.memory,
+.cpu,
+.battery,
+.weather,
+.audio {
+  margin-right: 2px; 
+  padding: 5px 5px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px; 
+  background: #202124;
+  border-bottom: 2px solid rgb(146, 14, 49);
+  white-space: nowrap;
+}
+
+.memory-cpu {
+  display: flex;
+  align-items: start;
+}
+
+.time {
+  margin-right: 16px;
+}
+
+.audio {
+  i, span {
+    cursor: pointer;
+  }
+
+  i:hover {
+    color: rgb(160, 160, 160);
+  }
+}
+
+.workspaces {
+  display: flex;
+  align-items: flex-start;
+}
+
+.workspace {
+  background: rgb(255 255 255 / 0%); 
+  margin-top: -1px;
+  margin-right: 2px;
+  margin-left: 2px;
+  padding: 4.5px 14px;
+  color: rgb(255 255 255 / 90%);
+  border: none;
+  cursor: pointer;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  
+  font-weight: 550;
+
+  &.displayed, /* for workspace on multiple displays */
+  &.focused,
+  &:hover {
+    background: #202124;
+    border-bottom: 2px solid rgb(176, 16, 59);
+    box-shadow: 0 2px 4px rgba(213, 36, 84, 0.75); 
+  }
+
+  /* &.not-focused {
+    
+  } */
+}
+
+
+.tiling-direction {
+  background: rgba(255, 255, 255, 0);
+  color: rgb(255 255 255 / 90%);
+  border-radius: 2px;
+  line-height: 1;
+  margin-top: 1px;
+  margin-right: 25px;
+  padding: 2px 8px;
+  border: 0;
+  cursor: pointer;
+
+  &:hover {
+    color: rgb(200, 200, 200);
+  }
+}
+
+.binding-mode {
+  margin-right: 4px;
+}
+
+.cpu .high-usage {
+  color: #ff0048;
+}
+
+.battery {
+  position: relative;
+  margin-right: 0px;
+}
+
+.battery .charging-icon {
+  position: absolute;
+  font-size: 7px;
+  top: 3px;
+}
+
+.btn {
+  background: none;
+  border: none;
+  color: white;
+  margin-right: -12px;
+  cursor: pointer;
+
+  &:hover {
+    color: rgb(200, 200, 200);
+  }
+}
+
+.now-playing {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.audio progress {
+  height: 10px;
+  margin-top: -2px;
+  accent-color: #e57050;
+  cursor: pointer;
+  margin-right: 6px;
+  min-width: 70px;
+  max-width: 70px;
+  flex-shrink: 0;
+}
+
+@keyframes scroll-left {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
