@@ -143,9 +143,6 @@
         useEffect(() => {
           const mySpotifySession = output.media?.allSessions?.find(session => session.sessionId.includes('Spotify'));
           setSpotifySession(mySpotifySession || null);
-          if (spotifySession) {
-            output.media.MediaControlOptions = { sessionId: spotifySession.sessionId };
-          }
         }, [output.media?.allSessions]);
 
         // Get icon to show for current network status.
