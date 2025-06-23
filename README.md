@@ -15,7 +15,7 @@
 
 - Windows 10/11
 - [GlazeWM](https://github.com/glzr-io/glazewm) (for workspace features)
-- [Zebar](https://github.com/glzr-io/zebar) 
+- [Zebar](https://github.com/glzr-io/zebar) v2.7.0
 
 ### Steps
 
