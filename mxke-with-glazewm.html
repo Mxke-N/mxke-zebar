@@ -47,8 +47,6 @@
         const [shouldScroll, setShouldScroll] = React.useState(true);
         const [textWidth, setTextWidth] = React.useState(0);
 
-        console.log(myOutput);
-
         React.useEffect(() => {
           const container = containerRef.current;
           const textEl = textRef.current;
@@ -104,6 +102,7 @@
         const [volume, setVolume] = useState(output.audio?.defaultPlaybackDevice?.volume || 50);
         const [previousVolume, setPreviousVolume] = useState(volume);
         const [isDragging, setIsDragging] = useState(false);
+        const [spotifySession, setSpotifySession] = useState(null);
 
         useEffect(() => {
           providers.onOutput(() => setOutput(providers.outputMap));
@@ -141,6 +140,13 @@
           }
         }, [output.audio]);
 
+        useEffect(() => {
+          const mySpotifySession = output.media?.allSessions?.find(session => session.sessionId.includes('Spotify'));
+          setSpotifySession(mySpotifySession || null);
+          if (spotifySession) {
+            output.media.MediaControlOptions = { sessionId: spotifySession.sessionId };
+          }
+        }, [output.media?.allSessions]);
 
         // Get icon to show for current network status.
         function getNetworkIcon(networkOutput) {
@@ -323,28 +329,29 @@
 
               </div>
 
-              {output.media && output.media.currentSession && output.media.currentSession.sessionId.includes('Spotify') && (
+              {/* Media Now Playing Section */}
+              {output.media && spotifySession && (
                 <div className="now-playing" style={{ display: 'flex', alignItems: 'center', gap: '0.5em', marginTop: '1px'}}>
 
                   <i className="nf nf-md-music_note" style={{ marginTop: '-1px', marginRight: '0px' }}></i>
 
                   <ScrollingText
-                    text={`${output.media.currentSession.title}${output.media.currentSession.artist ? ' – ' + output.media.currentSession.artist : ''}`}
-                    myOutput={output.media.currentSession}
+                    text={`${spotifySession.title}${spotifySession.artist ? ' – ' + spotifySession.artist : ''}`}
+                    myOutput={spotifySession}
                   />
 
                   {output.media.previous && (
-                    <button className="btn media-prev" onClick={() => output.media.previous()} title="Previous">⏮</button>
+                    <button className="btn media-prev" onClick={() => { output.media.previous({ session_id: spotifySession.sessionId }) }} title="Previous">⏮</button>
                   )}
 
                   {output.media.togglePlayPause && (
-                    <button className="btn media-pause" onClick={() => output.media.togglePlayPause()} title="Play/Pause" style={{ fontSize: '14px' }}>
-                      {output.media.currentSession.isPlaying ? '⏸' : '⏵'}
+                    <button className="btn media-pause" onClick={() => { output.media.togglePlayPause({ session_id: spotifySession.sessionId }) }} title="Play/Pause" style={{ fontSize: '14px' }}>
+                      {spotifySession.isPlaying ? '⏸' : '⏵'}
                     </button>
                   )}
 
                   {output.media.next && (
-                    <button className="btn media-next" onClick={() => output.media.next()} title="Next">⏭</button>
+                    <button className="btn media-next" onClick={() => { output.media.next({ session_id: spotifySession.sessionId }) }} title="Next">⏭</button>
                   )}
 
                 </div>
